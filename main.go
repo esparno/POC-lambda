@@ -117,9 +117,9 @@ func sendOrdersToDataBase(orders []Order) {
 
 	host := os.Getenv("HOST")
 	port, err := strconv.Atoi(os.Getenv("PORT"))
-	user := os.Getenv("rdsuser")
-	password := os.Getenv("rdspassword")
-	dbname := os.Getenv("rdsdb")
+	user := os.Getenv("RDSUSER")
+	password := os.Getenv("RDSPASSWORD")
+	dbname := os.Getenv("RDSDB")
 
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
 		"password=%s dbname=%s sslmode=disable",
